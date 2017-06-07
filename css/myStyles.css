@@ -1,0 +1,19 @@
+.flip {
+   width:300px;
+   height: 300px;
+   overflow:hidden;
+}
+
+.front
+{
+   float:left;
+   width:300px;
+   height:300px;
+}
+
+.back
+{
+   float:left;
+   width:300px;
+   height:300px;
+}
