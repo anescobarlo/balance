@@ -1,0 +1,19 @@
+img {
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+p {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    font-size: 18px;
+}
+
+ul {
+    text-align: left;
+    margin-top: 20px;
+}
