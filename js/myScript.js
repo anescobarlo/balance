@@ -9,7 +9,8 @@
 
     //Initialize display information
     document.getElementById("matchInfo").innerHTML="To start select any card bellow ↓";
-    document.getElementById("attempts").innerHTML="Attempts = 0";
+    document.getElementById("totalAttempts").innerHTML="Total Attempts = 0";
+    document.getElementById("unsuccessfulAttempts").innerHTML="Unsuccessful Attempts = 0";
 
     //Create divs
     var output = "";
@@ -22,7 +23,8 @@
     //Initialize variables
     var matches = 0;
     var cardsFlipped = 0;
-    var attempts = 0;
+    var totalAttempts = 0;
+    var unsuccessfulAttempts = 0;
     var cardId = new Array();
     var firstCard, secondCard;
 
@@ -52,14 +54,16 @@
             if (cardId[1] == cardId[2]) {
                 document.getElementById("matchInfo").innerHTML="match of " + cardId[1] + " ✓ good job!";
                 matches ++;
-                attempts ++;
-                document.getElementById("attempts").innerHTML="Attempts = " + attempts;
+                totalAttempts ++;
+                document.getElementById("totalAttempts").innerHTML="Total Attempts = " + totalAttempts;
                 cardsFlipped = 0;
             }
             else {
                 document.getElementById("matchInfo").innerHTML="not a match ✗ keep trying!";
-                attempts ++;
-                document.getElementById("attempts").innerHTML="Attempts = " + attempts;
+                totalAttempts ++;
+                unsuccessfulAttempts ++;
+                document.getElementById("totalAttempts").innerHTML="Total Attempts = " + totalAttempts;
+                document.getElementById("unsuccessfulAttempts").innerHTML="Unsuccessful Attempts = " + unsuccessfulAttempts;
                 cardsFlipped = 0;
                 //Hide cards after 1 second
                 setTimeout(function() {

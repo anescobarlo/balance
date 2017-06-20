@@ -3,11 +3,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
 }
 
 .flip {
-   width:150px;
-   height: 150px;
    overflow:hidden;
    margin: 10px;
    background-image: url("../imgs/balance.jpg");
@@ -24,34 +23,13 @@ img {
     background-color: rgba(140,243,192,0.1);
     border-radius: 8px;
     margin: auto;
-    width: 300px;
-    height: 35px;
-    font-size: 20px;
     text-align: center;
-}
-
-.gameDisplay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.gameInformation {
-    width: 70%;
 }
 
 .dashboard {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-left: 30px;
 }
-
-.attempts {
-    margin-bottom: 10px;
-}
-
 
 #button {
     background-color: rgba(140,243,192,0.7);
@@ -60,4 +38,111 @@ img {
     width: 150px;
     height: 30px;
     margin-left: 25px;
+}
+
+/*media queries - cards display*/
+/* mobile - portrait */
+@media only screen and (max-width : 320px) {
+    #memoryCards {
+        width: 100px;
+    }
+
+    .flip {
+        width:80px;
+        height: 80px;
+    }
+}
+
+/* mobile - landscape */
+@media only screen and (min-width : 321px) {
+    #memoryCards {
+        width: 300px;
+    }
+
+    .flip {
+        width:100px;
+        height: 100px;
+    }
+}
+
+/* tablet (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #memoryCards {
+        width: 500px;
+    }
+
+    .flip {
+        width:120px;
+        height: 120px;
+    }
+}
+
+/* computer and laptop */
+@media only screen  and (min-width : 1025px) {
+    #memoryCards {
+        width: 700px;
+    }
+
+    .flip {
+        width:150px;
+        height: 150px;
+        }
+}
+
+/*media queries - game information display*/
+/* mobile */
+@media only screen and (max-width : 767px) {
+    #matchInfo {
+        font-size: 15px;
+        width: 250px;
+        height: 25px;
+    }
+
+    .gameDisplay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        width: 300px;
+    }
+
+    .attempts {
+        margin: 10px;
+    }
+}
+
+/* tablet and computer */
+@media only screen and (min-width: 768px) {
+    #matchInfo {
+        font-size: 20px;
+        width: 300px;
+        height: 35px;
+    }
+
+    .gameDisplay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 700px;
+    }
+
+    .gameInformation {
+        width: 70%;
+    }
+
+    .dashboard {
+        margin-left: 30px;
+        align-self: flex-end;
+    }
+
+    .attempts {
+        margin-bottom: 10px;
+    }
+    
+    .totalAttempts {
+        margin-left: 54px;
+    }
+    
 }
